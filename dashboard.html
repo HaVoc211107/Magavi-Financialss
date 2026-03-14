@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magavi Ledger | Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="brand">Magavi Ledger</div>
+      <nav>
+        <a class="active" href="dashboard.html">Dashboard</a>
+        <a href="dashboard.html">Books</a>
+        <a href="#" aria-disabled="true">Settings</a>
+      </nav>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </aside>
+
+    <main class="main">
+      <header class="page-header">
+        <div>
+          <h1>Dashboard</h1>
+          <p id="welcomeUser" class="muted"></p>
+          <p class="muted">Your accounting books at a glance.</p>
+        </div>
+      </header>
+
+      <section class="panel">
+        <h2>Books</h2>
+        <div id="bookList" class="card-grid"></div>
+      </section>
+
+      <section class="panel">
+        <h2>Create New Book</h2>
+        <form id="newBookForm" class="inline-form">
+          <input type="text" id="newBookName" placeholder="Book name" required />
+          <button type="submit" class="primary">Add Book</button>
+        </form>
+        <p class="tiny muted">Examples: Household, My Shop, Farm</p>
+      </section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
